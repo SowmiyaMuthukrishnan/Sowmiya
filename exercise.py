@@ -16,13 +16,5 @@ while(i>=1):
     print(i,end=' ')
     i=i-1
 
-#for loop
-n=100
-if(n<=1):
-    print("values of n:",n)
-    print("numbers from 100 to 1 are:".format(n,1))
-    for i in range(n,0,-1):
-        print(i)
-
 
 
