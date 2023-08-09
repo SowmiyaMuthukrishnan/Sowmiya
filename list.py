@@ -156,4 +156,12 @@ print ('Modulo: ', a % b) #remainder
 # a to the power of b
 print ('Power: ', a ** b)
 
+#reverse
+x=[7,2,3,0,6,4,5,1]
+x.reverse()
+print(x)
+
+things=["Pen","Pencil","Notebook"]
+things.reverse()
+print(things)
 
