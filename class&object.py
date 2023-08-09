@@ -13,6 +13,20 @@ class Person:
 A=Person("Sowmiya",20,203304)
 A.Sayhello()
 
+#Appliances
+class Appliances:
+    def __init__ (self,home,company,market):
+        self.home=home
+        self.company=company
+        self.market=market
+    def display(self):
+        print("Home appliance is ",self.home)
+        print("Company appliance is ",self.company)
+        print("Market appliance is ",self.market)
+
+A=Appliances("Fan","Laptops","CCTVs")
+A.display()
+
 #example
 class Person:
     def __init__ ( self,name):
