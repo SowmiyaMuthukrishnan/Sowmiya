@@ -36,14 +36,6 @@ A=Person("Sowmiya")
 A.name
 
 #example 1
-#class A:
-   # i=123
-  #  def __init__ ( self):
- #       self.i=12345
-#print(A).i
-#print(A().i)
-
-#example 2
 #constructor
 class Person:
     def __init__ ( self,name,age,rollno):
@@ -66,7 +58,7 @@ C.Sayhello()
 D.Sayhello()
 E.Sayhello()
 
-#example 3
+#example 2
 #destructor
 class Person:
     def __init__ ( self,name):
