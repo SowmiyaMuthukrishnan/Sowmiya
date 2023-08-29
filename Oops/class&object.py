@@ -94,5 +94,91 @@ print(A.getName(),A.isName())
 A=Office("Sona")
 print(A.getName(),A.isName())
 
+#example 2
+class Person(object):
+    def get_name(self,name):
+        self.name=name
+    def get_details(self):
+        return self.name
+class Student(Person):
+    def fill_details(self,name,branch,year):
+        Person.get_name(self,name)
+        self.branch=branch
+        self.year=year
+    def get_details(self):
+        print("Name : ",self.name)
+        print("Branch : ",self.branch)
+        print("Year : ",self.year)
+class Teacher(Person):
+    def fill_details(self,name,branch):
+        Person.get_name(self,name)
+        self.branch=branch
+    def get_details(self):
+        print("Name : ",self.name)
+        print("Branch : ",self.branch)
+
+person1=Person()
+student1=Student()
+teacher1=Teacher()
+
+person1.get_name("Sowmiya")
+student1.fill_details("Sowmiya","ECE",2020)
+teacher1.fill_details("Sowmiya","ECE")
+
+print(person1.get_details())
+print(student1.get_details())
+print(teacher1.get_details())
+
+#Enccapsulation
+class A:
+    def __init__ (self,private):
+        self.__private=private
+    def getPrivate(self):
+        return self.__private
+    def setPrivate(self,private):
+        self.__private=private
+
+a1=A(14)
+a1.getPrivate()
+
+a1.setPrivate(24)
+a1.getPrivate()
+print(a1.getPrivate())
+print(a1.getPrivate())
+
+#to print the string in uppercase
+#class Uppercase(object):
+    #def __init__(self,object):
+
+     #   self.object=object
+    #def inputStr(self):
+   #self.object=input()
+  #  def displayStr(self):
+ #print(self.object.upper())
+
+#a=Uppercase("python")
+#a.inputStr()
+#a.displayStr()
+
+#Bank
+class BankAccount:
+    def __init__(self):
+        self.balance=0
+        print("Hello Welcome To RBI - Reserve Bank of India")
+    def deposit(self):
+        amount=float(input("Enter the number to be Deposited : "))
+        self.balance=self.balance+amount
+        print("Amount to be Deposited : ",amount)
+    def withdraw(self):
+        amount=float(input("Enter the number to be Withdraw : "))
+        self.balance=self.balance-amount
+        print("Amount to be Withdraw : ",amount)
+    def display(self):
+        print("Available balance : ",self.balance)
+
+A=BankAccount()
+A.deposit()
+A.withdraw()
+A.display()
 
 
