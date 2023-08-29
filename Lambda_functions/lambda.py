@@ -61,3 +61,39 @@ animals = ['dog','cat','lion','tiger']
 upper_animal=list(map(lambda animals : animals.upper(),animals))
 print("the uppercase of animals : ",upper_animal)
 
+#uppercase using slicing function
+str1 = 'CopyAssignment'
+str2 = lambda str2: str2[:].upper()
+print(str2(str1))
+
+# reverse and convert a string to uppercase
+str1 = 'CopyAssignment'
+str2 = lambda str2: str2[::-1].upper()
+print(str2(str1))
+
+#tuple
+my_tuple = (1,5,7,4,3,6,8)
+new_tuple = reduce(lambda x , y: (x + y) , my_tuple)
+print("sum=",new_tuple)
+
+#function inside another function
+def myfunc(n):
+    return lambda a : a * n
+mydoubler = myfunc(2)
+print(mydoubler(11))
+
+#example 1
+my_list=["boy","girl"]
+new_list=list(map(lambda my_list:my_list.upper(),my_list))
+for i in range(0,len(my_list)):
+    print(my_list[i],":",new_list[i])
+
+#example 2
+my_list1=["boy"]
+list1=list(map(lambda my_list1:my_list1.upper(),my_list1))
+my_list2=["girl"]
+list2=list(map(lambda my_list2:my_list2.upper(),my_list2))
+
+for i in range(0,len(my_list1)):
+    print(my_list1[i],":",list1[i])
+    print(my_list2[i],":",list2[i])
